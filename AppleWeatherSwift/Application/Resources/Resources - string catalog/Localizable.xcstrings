@@ -1,0 +1,94 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@hPa" : {
+
+    },
+    "%lldMM" : {
+
+    },
+    "%lldºC" : {
+
+    },
+    "Direction" : {
+
+    },
+    "Enable location" : {
+
+    },
+    "Enable Location" : {
+
+    },
+    "Error fetching data" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error fetching data"
+          }
+        }
+      }
+    },
+    "Forecast" : {
+
+    },
+    "Give us permission to see forecast for your current location." : {
+
+    },
+    "Humidity" : {
+
+    },
+    "It’s raining." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "It’s raining."
+          }
+        }
+      }
+    },
+    "its.raining" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "It’s raining"
+          }
+        }
+      }
+    },
+    "Precipitation" : {
+
+    },
+    "Pressure" : {
+
+    },
+    "Reload the location or search for a different one." : {
+
+    },
+    "Share" : {
+
+    },
+    "Today" : {
+
+    },
+    "Today.view.messega" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today"
+          }
+        }
+      }
+    },
+    "Wind" : {
+
+    }
+  },
+  "version" : "1.0"
+}
