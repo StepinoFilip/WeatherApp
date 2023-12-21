@@ -32,4 +32,26 @@ func countryName(countryCode: String) -> String? {
         return current.localizedString(forRegionCode: countryCode)
     }
 
+extension Date {
+    static func formatUnixTimestampInGMT(_ timestamp: Double) -> String {
+        let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm a"
+        dateFormatter.timeZone = TimeZone(identifier: "GMT")
+        
+        return dateFormatter.string(from: date)
+    }
+}
 
+extension Double {
+    func kelvinToCelsius() -> Double {
+        return self - 273.15
+    }
+}
+
+extension Date {
+    func adjusting(byHours hours: TimeInterval) -> Date {
+        return addingTimeInterval(3600 * hours)
+    }
+}

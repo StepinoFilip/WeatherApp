@@ -97,7 +97,7 @@ struct ContentView: View {
                 }
                 .tag(0)
                 .toolbarBackground(.mainBackground, for: .tabBar)
-            ForecastView(forecast: viewModel.forecast)
+            ForecastView(weather: previewForecast)
                 .tabItem {
                     Image(.tabBarForecast)
                         .foregroundColor(viewModel.selectedTab == 1 ? .tabBar : .gray)

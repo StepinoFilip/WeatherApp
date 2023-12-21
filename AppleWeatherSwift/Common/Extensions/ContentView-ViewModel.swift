@@ -10,8 +10,8 @@ import CoreLocationUI
 
 extension ContentView {
    @MainActor class ViewModel: ObservableObject {
-       @Published var weather: ResponseBody?
-       @Published var forecast: ResponseBody?
+       @Published var weather: CurrentResponse?
+       @Published var forecast: ForecastResponse?
        @Published var selectedTab = 0
        @Published private var isLocationEnabled: Bool = true
        

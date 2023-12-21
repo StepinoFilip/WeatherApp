@@ -18,7 +18,7 @@ extension Image {
 
 struct ForecastDetailView: View {
     
-    var weather: ResponseBody
+    var weather: ForecastResponse.ListResponse
     
     var body: some View {
         HStack(
@@ -31,7 +31,7 @@ struct ForecastDetailView: View {
                     .frame(maxWidth: 48, maxHeight: 48)
                     .cornerRadius(48)
                     .foregroundColor(.iconBase)
-                Image(WeatherManager().getImageNameForWeatherIcon(icon: weather.weather.first?.icon ?? ""))
+                Image(WeatherManager().getImageNameForForecastIcon(icon: weather.weather.first?.icon ?? ""))
                     .imageSize()
                 
             }
@@ -41,15 +41,15 @@ struct ForecastDetailView: View {
                 alignment: .leading
                 
             ) {
-                Text("\(Int(weather.list.dttxt))")
+                Text("\(Date.formatUnixTimestampInGMT(weather.date))")
                     .modifier(ContentMediumModifier())
-                Text(WeatherManager().getWeatherInfoFormWeatherIcon(icon: weather.weather.first?.icon ?? "", temperature: weather.main.temp))
+                Text(WeatherManager().getWeatherInfoFormForecastIcon(icon: weather.weather.first?.icon ?? ""))
                     .modifier(ContentSmallInfoModifier())
             }
             
             Spacer()
             
-            Text("\(Int(weather.list.main.temp.rounded()))ºC")
+            Text("\(Int(weather.main.temp.kelvinToCelsius()))ºC")
                 .modifier(HeadlineThreeModifier())
             
                 .padding()
@@ -63,6 +63,6 @@ struct ForecastDetailView: View {
 
 struct ForecastDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ForecastDetailView(weather: previewWeatherForecast)
+        ForecastDetailView(weather: previewForecast.list.first ?? .init(date: 1702749600, main: .init(temp: 0), weather: []))
     }
 }

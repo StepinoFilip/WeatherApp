@@ -20,5 +20,241 @@
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "91C638BB-AD70-4929-8B75-B3B58D456877"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppleWeatherSwift/Application/Resources/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5E087E75-3B64-4812-83CE-F5EE50A3933D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppleWeatherSwift/Application/Resources/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F3B6B25E-B3DD-4CE0-9C80-FB633B2A88CE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppleWeatherSwift/Application/Resources/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "F3B6B25E-B3DD-4CE0-9C80-FB633B2A88CE - fd662eb9280c4225"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of AppleWeatherSwift.ContentView.tabBarView : some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.task(priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0&gt;, SwiftUI._ConditionalContent&lt;AppleWeatherSwift.LoadingView, &lt;&lt;opaque return type of AppleWeatherSwift.ContentView.loadingView : some&gt;&gt;.0&gt;&gt; in AppleWeatherSwift.ContentView.body.getter : some"
+                  moduleName = "AppleWeatherSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/filipstepanek/Documents/CODE/AppleWeatherSwift/AppleWeatherSwift/Application/Resources/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "224">
+               </Location>
+               <Location
+                  uuid = "F3B6B25E-B3DD-4CE0-9C80-FB633B2A88CE - c4d84d3fbd7f2424"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of AppleWeatherSwift.ContentView.tabBarView : some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.task(priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0&gt;, SwiftUI._ConditionalContent&lt;AppleWeatherSwift.LoadingView, &lt;&lt;opaque return type of AppleWeatherSwift.ContentView.loadingView : some&gt;&gt;.0&gt;&gt; in AppleWeatherSwift.ContentView.body.getter : some"
+                  moduleName = "AppleWeatherSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/filipstepanek/Documents/CODE/AppleWeatherSwift/AppleWeatherSwift/Application/Resources/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "224">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C5CE9D7D-10D0-4640-9D45-CB694D71F3FB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppleWeatherSwift/Application/Resources/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "C5CE9D7D-10D0-4640-9D45-CB694D71F3FB - 7e70cfc171a1bc6e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of AppleWeatherSwift.ContentView.tabBarView : some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.task(priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0&gt;, SwiftUI._ConditionalContent&lt;AppleWeatherSwift.LoadingView, &lt;&lt;opaque return type of AppleWeatherSwift.ContentView.loadingView : some&gt;&gt;.0&gt;&gt; in AppleWeatherSwift.ContentView.body.getter : some"
+                  moduleName = "AppleWeatherSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/filipstepanek/Documents/CODE/AppleWeatherSwift/AppleWeatherSwift/Application/Resources/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "C5CE9D7D-10D0-4640-9D45-CB694D71F3FB - 79589b3818b20373"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) await resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of AppleWeatherSwift.ContentView.tabBarView : some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.task(priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0&gt;, SwiftUI._ConditionalContent&lt;AppleWeatherSwift.LoadingView, &lt;&lt;opaque return type of AppleWeatherSwift.ContentView.loadingView : some&gt;&gt;.0&gt;&gt; in AppleWeatherSwift.ContentView.body.getter : some"
+                  moduleName = "AppleWeatherSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/filipstepanek/Documents/CODE/AppleWeatherSwift/AppleWeatherSwift/Application/Resources/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "C5CE9D7D-10D0-4640-9D45-CB694D71F3FB - ab0c0ec49bd8e06c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of AppleWeatherSwift.ContentView.tabBarView : some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.task(priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0&gt;, SwiftUI._ConditionalContent&lt;AppleWeatherSwift.LoadingView, &lt;&lt;opaque return type of AppleWeatherSwift.ContentView.loadingView : some&gt;&gt;.0&gt;&gt; in AppleWeatherSwift.ContentView.body.getter : some"
+                  moduleName = "AppleWeatherSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/filipstepanek/Documents/CODE/AppleWeatherSwift/AppleWeatherSwift/Application/Resources/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "C5CE9D7D-10D0-4640-9D45-CB694D71F3FB - c4d84d3fbd7f2462"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of AppleWeatherSwift.ContentView.tabBarView : some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.task(priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0&gt;, SwiftUI._ConditionalContent&lt;AppleWeatherSwift.LoadingView, &lt;&lt;opaque return type of AppleWeatherSwift.ContentView.loadingView : some&gt;&gt;.0&gt;&gt; in AppleWeatherSwift.ContentView.body.getter : some"
+                  moduleName = "AppleWeatherSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/filipstepanek/Documents/CODE/AppleWeatherSwift/AppleWeatherSwift/Application/Resources/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "32300D35-107F-435B-8D58-CE5A494D2872"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppleWeatherSwift/Application/Resources/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "32300D35-107F-435B-8D58-CE5A494D2872 - c2a488ce4e0b78aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of AppleWeatherSwift.ContentView.tabBarView : some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.task(priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0&gt;, SwiftUI._ConditionalContent&lt;AppleWeatherSwift.LoadingView, &lt;&lt;opaque return type of AppleWeatherSwift.ContentView.loadingView : some&gt;&gt;.0&gt;&gt; in AppleWeatherSwift.ContentView.body.getter : some"
+                  moduleName = "AppleWeatherSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/filipstepanek/Documents/CODE/AppleWeatherSwift/AppleWeatherSwift/Application/Resources/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "32300D35-107F-435B-8D58-CE5A494D2872 - 60fca867554bdfbf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of AppleWeatherSwift.ContentView.tabBarView : some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.task(priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0&gt;, SwiftUI._ConditionalContent&lt;AppleWeatherSwift.LoadingView, &lt;&lt;opaque return type of AppleWeatherSwift.ContentView.loadingView : some&gt;&gt;.0&gt;&gt; in AppleWeatherSwift.ContentView.body.getter : some"
+                  moduleName = "AppleWeatherSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/filipstepanek/Documents/CODE/AppleWeatherSwift/AppleWeatherSwift/Application/Resources/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "32300D35-107F-435B-8D58-CE5A494D2872 - 7e70cfc171a1bcac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of AppleWeatherSwift.ContentView.tabBarView : some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.task(priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0&gt;, SwiftUI._ConditionalContent&lt;AppleWeatherSwift.LoadingView, &lt;&lt;opaque return type of AppleWeatherSwift.ContentView.loadingView : some&gt;&gt;.0&gt;&gt; in AppleWeatherSwift.ContentView.body.getter : some"
+                  moduleName = "AppleWeatherSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/filipstepanek/Documents/CODE/AppleWeatherSwift/AppleWeatherSwift/Application/Resources/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "32300D35-107F-435B-8D58-CE5A494D2872 - fd662eb9280c42a1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of AppleWeatherSwift.ContentView.tabBarView : some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.task(priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0&gt;, SwiftUI._ConditionalContent&lt;AppleWeatherSwift.LoadingView, &lt;&lt;opaque return type of AppleWeatherSwift.ContentView.loadingView : some&gt;&gt;.0&gt;&gt; in AppleWeatherSwift.ContentView.body.getter : some"
+                  moduleName = "AppleWeatherSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/filipstepanek/Documents/CODE/AppleWeatherSwift/AppleWeatherSwift/Application/Resources/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

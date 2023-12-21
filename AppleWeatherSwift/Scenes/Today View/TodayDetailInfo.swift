@@ -18,7 +18,7 @@ extension Image {
 
 struct TodayDetailInfo: View {
     
-    var weather: ResponseBody
+    var weather: CurrentResponse
     
     var body: some View {
         VStack(

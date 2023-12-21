@@ -11,7 +11,7 @@ struct TodayView: View {
     
     @State private var shouldPresentShareSheet = false
     
-    var weather: ResponseBody
+    var weather: CurrentResponse
     
     var body: some View {
         ZStack{
