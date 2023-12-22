@@ -88,7 +88,7 @@ struct TodayView: View {
             .scaledToFit()
             .aspectRatio(contentMode: .fit)
             .frame(minWidth: 40, maxWidth: 40)
-//        Text("\(Int(weather.main.temp.kelvinToCelsius().rounded()))ºC")
+
         Text("\(Int(weather.main.temp.rounded()))ºC")
             .modifier(TemperatureModifier())
             .padding(.vertical, 4)
@@ -99,101 +99,8 @@ struct TodayView: View {
     }
 }
 
-
-
-
 struct TodayView_Previews: PreviewProvider {
     static var previews: some View {
         TodayView(weather: previewWeather)
     }
 }
-
-
-//import SwiftUI
-//
-//struct TodayView: View {
-//
-//    @StateObject var locationManager = LocationManager()
-//
-//    var body: some View {
-//        ZStack{
-//            AnimationBackgroundView()
-//
-//            VStack (
-//                alignment: .leading
-//            ){
-//                HStack {
-//                    Spacer()
-//
-//                    Button() {
-//                        print("Button pressed Share")
-//                    } label: {
-//                        Text("Share")
-//                            .cornerRadius(40)
-//                            .accentColor(.tabBar)
-//                            .font(.buttons)
-//                            .foregroundStyle(.shareButtonText)
-//                    }
-//                    .buttonStyle(ShareButton())
-//                }
-//
-//                Spacer()
-//
-//                VStack (
-//                    alignment: .leading,
-//                    spacing: 48
-//                ){
-//
-//                    Text("its.raining")
-//                        .modifier(TitleModifier())
-//                        .foregroundColor(.mainText)
-//
-//                    VStack(
-//                        alignment: .leading,
-//                        spacing: 4
-//
-//                    ){
-//                        Image(.todayRain)
-//                            .resizable()
-//                            .scaledToFit()
-//                            .aspectRatio(contentMode: .fit)
-//                            .frame(minWidth: 40, maxWidth: 40)
-//
-//                        Text("19°C")
-//                            .modifier(TemperatureModifier())
-//                            .padding(.vertical, 4)
-//
-//                        Text("Prague, Czech Republic")
-//                            .modifier(ContentModifier())
-//                            .padding(.vertical, 8)
-//                    }
-//                }
-//
-//                .padding(.vertical, 20)
-//                VStack (
-//                    alignment: .leading,
-//                    spacing: 15
-//                ){
-//                    Rectangle()
-//                        .frame(maxHeight: 1)
-//                        .foregroundColor(.devider)
-//
-//                    TodayDetailInfo()
-//
-//                    Rectangle()
-//                        .frame(maxHeight: 1)
-//                        .foregroundColor(.devider)
-//                }
-//            }
-//            .padding()
-//
-//
-//        }
-//    }
-//}
-//struct TodayView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TodayView()
-//    }
-//}
-//

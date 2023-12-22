@@ -48,7 +48,6 @@ struct TodayDetailInfo: View {
                         .imageFrameShape()
                     
                     Text("\(Int((weather.rain?.oneHour ?? 0)))MM")
-//                    Text("1MM")
                         .modifier(ContentSmallModifier())
                     
                     Text("Precipitation")

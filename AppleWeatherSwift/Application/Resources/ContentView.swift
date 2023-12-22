@@ -5,46 +5,6 @@
 //  Created by Filip Štěpánek on 01.11.2023.
 //
 
-//import SwiftUI
-//
-//struct ContentView: View {
-//
-//    @State private var selectedTab = 0
-//
-//    var body: some View {
-//        TabView(selection: $selectedTab) {
-//            TodayView()
-//                .tabItem {
-//                    Image(.tabBarToday)
-//                        .foregroundColor(selectedTab == 0 ? .tabBar : .gray)
-//                    Text("Today")
-//                        .font(.tabBarFont)
-//                        .background()
-//                }
-//                .tag(0)
-//                .toolbarBackground(.mainBackground, for: .tabBar)
-//            ForecastView()
-//                .tabItem {
-//                    Image(.tabBarForecast)
-//                        .foregroundColor(selectedTab == 1 ? .tabBar : .gray)
-//                    Text("Forecast")
-//                        .font(.tabBarFont)
-//                        .background(.tabBar)
-//                }
-//                .tag(1)
-//                .toolbarBackground(.mainBackground, for: .tabBar)
-//        }
-//        .accentColor(.tabBar)
-//        .onAppear {
-//            selectedTab = 0
-//        }
-//    }
-//}
-//
-//#Preview {
-//    ContentView()
-//}
-
 import SwiftUI
 import CoreLocationUI
 

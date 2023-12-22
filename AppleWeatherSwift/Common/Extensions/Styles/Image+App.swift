@@ -8,7 +8,6 @@
 import SwiftUI
 
 extension Image {
-    // System Images
     static let systemLocation = Image(systemName: "location.fill")
     static let systemWarning = Image(systemName: "exclamationmark.triangle.fill")
     static let systemReload = Image(systemName: "arrow.clockwise")

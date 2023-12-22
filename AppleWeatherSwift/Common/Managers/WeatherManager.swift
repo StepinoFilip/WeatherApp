@@ -99,7 +99,6 @@ class WeatherManager {
             }
         }
     
-    
     func getWeatherInfoFormWeatherIcon(icon: String, temperature: Double) -> String {
             switch icon {
             case "01d":
@@ -192,30 +191,6 @@ class WeatherManager {
             }
         }
     
-//    class WeatherManager {
-//        func getColorFromWeatherIcon(icon: String, temperature: Double) -> [Color] {
-//            switch icon {
-//            case "01d":
-//                return [temperature > 300 ? .red : .red, orange, .mainBackground]
-//            case "01n":
-//                return [.rain1, .rain2, .mainBackground]
-//            case "02d", "02n", "03d", "03n", "04d", "04n":
-//                return [.rain1, .rain2, .mainBackground]
-//            case "09d", "09n", "10d", "10n":
-//                return [.rain1, .rain2, .mainBackground]
-//            case "11d", "11n":
-//                return [.rain1, .rain2, .mainBackground]
-//            case "13d", "13n":
-//                return [.rain1, .rain2, .mainBackground]
-//            case "50d", "50n":
-//                return [.rain1, .rain2, .mainBackground]
-//            default:
-//                return [.rain1, .rain2, .mainBackground]
-//            }
-//        }
-//    }
-//
-//    
     
 // MARK: - API CALLING Current Weather
     struct CurrentAPIConfig {
@@ -233,11 +208,6 @@ class WeatherManager {
         guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data") }
         
         let decodedData = try JSONDecoder().decode(CurrentResponse.self, from: data)
-        
-//        let imageName = getImageNameForWeatherIcon(icon: decodedData.weather.first?.icon ?? "")
-        
-//        let temperature = decodedData.main.temp
-//        let weatherInfo = getWeatherInfoFormWeatherIcon(icon: decodedData.weather.first?.icon ?? "", temperature: temperature)
                 
         return decodedData
     }
@@ -260,8 +230,6 @@ class WeatherManager {
         let decoder = JSONDecoder()
         
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-        
-//        decoder.dateDecodingStrategy = .secondsSince1970
         
         let decodedData = try decoder.decode(ForecastResponse.self, from: data)
                 
