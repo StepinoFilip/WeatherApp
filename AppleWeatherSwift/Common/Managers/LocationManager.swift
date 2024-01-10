@@ -13,6 +13,13 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     @Published var location: CLLocationCoordinate2D?
     @Published var isLoading = false
+    @Published var status: Status = .unknown
+    
+    enum Status {
+        case locationGranted
+        case unknown
+        case denied
+    }
     
     override init() {
         super.init()
@@ -25,6 +32,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     func requestLocation() {
         isLoading = true
+        manager.requestWhenInUseAuthorization()
         manager.requestLocation()
     }
     
@@ -38,12 +46,15 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
             case .authorizedWhenInUse, .authorizedAlways:
                 // Handle authorized status
                 print("Location authorization granted")
+                self.status = .locationGranted
             case .denied, .restricted:
                 // Handle denied or restricted status
                 print("Location authorization denied or restricted")
+                self.status = .denied
             case .notDetermined:
                 // Handle not determined status
                 print("Location authorization not determined")
+                self.status = .unknown
                 manager.requestWhenInUseAuthorization()
             @unknown default:
                 break

@@ -1,5 +1,5 @@
 //
-//  ForecastView.swift
+//  MyLocationView.swift
 //  AppleWeatherSwift
 //
 //  Created by Filip Štěpánek on 01.11.2023.
@@ -7,19 +7,19 @@
 
 import SwiftUI
 
-struct ForecastView: View {
+struct TodayView: View {
     
-    @StateObject private var viewModelForecast = ForecastViewModel()
+    @StateObject private var viewModelToday = TodayViewModel()
     
     var body: some View {
         ZStack {
-            switch viewModelForecast.state {
+            switch viewModelToday.state {
             case .loading:
                 LoadingView()
             case .missingLocation:
-                EnableLocationView(locationManager: viewModelForecast.locationManager)
-            case .succes(let forecastResponse):
-                ForecastViewContent(weather: previewForecast)
+                EnableLocationView(locationManager: viewModelToday.locationManager)
+            case .succes(let currentResponse):
+                TodayViewContent(weatherManager: WeatherManager(), weather: previewWeather)
             case .error:
                 ErrorFetchingDataView()
 //            case .error(let string):
@@ -27,13 +27,13 @@ struct ForecastView: View {
             }
         }
         .task {
-            await viewModelForecast.getForecast()
+            await viewModelToday.getWeather()
         }
     }
 }
 
-struct ForecastView_Previews: PreviewProvider {
+struct TodayView_Previews: PreviewProvider {
     static var previews: some View {
-        ForecastView()
+        TodayView()
     }
 }

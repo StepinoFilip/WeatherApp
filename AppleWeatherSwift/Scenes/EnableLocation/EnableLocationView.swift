@@ -10,7 +10,7 @@ import CoreLocationUI
 
 struct EnableLocationView: View {
     
-    @EnvironmentObject var locationManager: LocationManager
+    let locationManager: LocationManager
     
     var body: some View {
         VStack (
@@ -22,19 +22,19 @@ struct EnableLocationView: View {
                 .scaledToFit()
                 .frame(width: 49)
             
-            Text("Enable Location")
+            Text("enable.Location.Title")
                 .modifier(TitleModifier())
                 .foregroundColor(.mainText)
             
             
-            Text("Give us permission to see forecast for your current location.")
+            Text("permission.Message")
                 .modifier(ErrorInfoModifier())
             
             Button(action: {
                             locationManager.requestLocation()
                         print("Button pressed Enable location")
                         }) {
-                Text("Enable location")
+                Text("enable.Location.Button.Title")
                     .font(.buttons)
                     .foregroundStyle(.enableLocationButtonText)
             }
@@ -50,6 +50,7 @@ struct EnableLocationView: View {
 
 
 #Preview {
-    EnableLocationView()
+    EnableLocationView(locationManager: LocationManager())
 }
+
 

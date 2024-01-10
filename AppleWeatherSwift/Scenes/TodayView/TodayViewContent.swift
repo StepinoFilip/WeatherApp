@@ -1,20 +1,22 @@
 //
-//  MyLocationView.swift
+//  TodayViewContent.swift
 //  AppleWeatherSwift
 //
-//  Created by Filip Štěpánek on 01.11.2023.
+//  Created by Filip Štěpánek on 08.01.2024.
 //
 
 import SwiftUI
 
-struct TodayView: View {
+struct TodayViewContent: View {
     
-    @State private var shouldPresentShareSheet = false
+    @StateObject private var viewModel = TodayViewModel()
+    var weatherManager = WeatherManager()
     
     var weather: CurrentResponse
     
     var body: some View {
-        ZStack{
+        
+        ZStack {
             AnimationBackgroundView()
             
             VStack (
@@ -64,15 +66,15 @@ struct TodayView: View {
             }
             .padding()
         }
-        .background(ShareSheetView(shouldPresent: $shouldPresentShareSheet, activityItems: ["Your shared content goes here"]))
+        .background(ShareSheetView(shouldPresent: $viewModel.shouldPresentShareSheet, activityItems: ["Your shared content goes here"]))
     }
     
     var shareButton: some View {
         Button(action: {
             print("Button pressed Share")
-            shouldPresentShareSheet.toggle()
+            viewModel.shouldPresentShareSheet.toggle()
         }) {
-            Text("Share")
+            Text("share.button.title")
                 .cornerRadius(40)
                 .accentColor(.tabBar)
                 .font(.buttons)
@@ -83,24 +85,39 @@ struct TodayView: View {
     
     @ViewBuilder
     var todayInformation: some View {
-        Image(WeatherManager().getImageNameForWeatherIcon(icon: weather.weather.first?.icon ?? ""))
+        
+        let temperature = Int(weather.main.temp.rounded())
+        let temperatureWithUnits = "\(temperatureUnitSymbol())"
+        
+        Image(weatherManager.getImageNameForWeatherIcon(icon: weather.weather.first?.icon ?? ""))
             .resizable()
             .scaledToFit()
             .aspectRatio(contentMode: .fit)
             .frame(minWidth: 40, maxWidth: 40)
-
-        Text("\(Int(weather.main.temp.rounded()))ºC")
+        
+        Text(temperatureWithUnits)
             .modifier(TemperatureModifier())
             .padding(.vertical, 4)
         
+        //        Text("Unknown")
         Text(weather.name + ", " + (countryName(countryCode: weather.sys.country) ?? "Unknown"))
             .modifier(ContentModifier())
             .padding(.vertical, 8)
     }
-}
-
-struct TodayView_Previews: PreviewProvider {
-    static var previews: some View {
-        TodayView(weather: previewWeather)
+    
+    func temperatureUnitSymbol() -> String {
+        let measurementFormatter = MeasurementFormatter()
+        measurementFormatter.numberFormatter.maximumFractionDigits = 0
+        
+        let temperature = Measurement(value: weather.main.temp, unit: UnitTemperature.celsius)
+        return measurementFormatter.string(from: temperature)
     }
 }
+
+
+struct TodayViewContent_Previews: PreviewProvider {
+    static var previews: some View {
+        TodayViewContent(weather: previewWeather)
+    }
+}
+

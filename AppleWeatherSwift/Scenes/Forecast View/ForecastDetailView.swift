@@ -7,20 +7,15 @@
 
 import SwiftUI
 
-extension Image {
-    func imageSize() -> some View {
-        self
-            .resizable()
-            .frame(maxWidth: 28.8, maxHeight: 28.8)
-            .aspectRatio(contentMode: .fit)
-    }
-}
-
 struct ForecastDetailView: View {
     
     var weather: ForecastResponse.ListResponse
     
     var body: some View {
+        
+        let temperature = Int(weather.main.temp.rounded())
+        let temperatureWithUnits = "\(temperatureUnitSymbol())"
+        
         HStack(
             spacing: 17
             
@@ -41,15 +36,17 @@ struct ForecastDetailView: View {
                 alignment: .leading
                 
             ) {
-                Text("\(Date.formatUnixTimestampInGMT(weather.date))")
+            
+                Text("\(Date.formatUnixTimestampInGMT(weather.date)) ")
                     .modifier(ContentMediumModifier())
+                
                 Text(WeatherManager().getWeatherInfoFormForecastIcon(icon: weather.weather.first?.icon ?? ""))
                     .modifier(ContentSmallInfoModifier())
             }
             
             Spacer()
             
-            Text("\(Int(weather.main.temp.kelvinToCelsius()))ºC")
+            Text(temperatureWithUnits)
                 .modifier(HeadlineThreeModifier())
             
                 .padding()
@@ -57,9 +54,15 @@ struct ForecastDetailView: View {
         .frame(maxWidth: .infinity)
         .background(.row)
         .cornerRadius(16)
-        
     }
-}
+        func temperatureUnitSymbol() -> String {
+            let measurementFormatter = MeasurementFormatter()
+            measurementFormatter.numberFormatter.maximumFractionDigits = 0
+            
+            let temperature = Measurement(value: weather.main.temp, unit: UnitTemperature.celsius)
+            return measurementFormatter.string(from: temperature)
+        }
+    }
 
 struct ForecastDetailView_Previews: PreviewProvider {
     static var previews: some View {

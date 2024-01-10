@@ -15,6 +15,9 @@ struct EnableButton: ButtonStyle {
             .contentShape(Rectangle())
             .background(.enableLocationButton)
             .cornerRadius(28)
+            .scaleEffect(configuration.isPressed ? 0.9 : 1.0)
+            .opacity(configuration.isPressed ? 0.6 : 1.0)
+            .animation(.easeInOut, value: configuration.isPressed)
     }
 }
 
@@ -25,6 +28,9 @@ struct ReloadButton: ButtonStyle {
             .background(.reloadBackground)
             .contentShape(Rectangle())
             .cornerRadius(40)
+            .scaleEffect(configuration.isPressed ? 0.9 : 1.0)
+            .opacity(configuration.isPressed ? 0.6 : 1.0)
+            .animation(.easeInOut, value: configuration.isPressed)
     }
 }
 
@@ -36,5 +42,8 @@ struct ShareButton: ButtonStyle {
             .contentShape(Rectangle())
             .background(.shareBackground)
             .cornerRadius(28)
+            .scaleEffect(configuration.isPressed ? 0.9 : 1.0)
+            .opacity(configuration.isPressed ? 0.6 : 1.0)
+            .animation(.easeInOut, value: configuration.isPressed)
     }
 }

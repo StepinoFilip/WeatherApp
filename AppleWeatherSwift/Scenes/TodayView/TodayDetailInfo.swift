@@ -7,15 +7,6 @@
 
 import SwiftUI
 
-extension Image {
-    func imageFrameShape() -> some View {
-        self
-            .frame(width: 40, height: 40)
-            .background(.todayImageSpahe)
-            .cornerRadius(40)
-    }
-}
-
 struct TodayDetailInfo: View {
     
     var weather: CurrentResponse
@@ -37,7 +28,7 @@ struct TodayDetailInfo: View {
                     Text(weather.main.humidity.roundDouble() + "%")
                         .modifier(ContentSmallModifier())
                     
-                    Text("Humidity")
+                    Text("humidity.title")
                         .modifier(ContentSmallInfoModifier())
                 }
                 
@@ -50,7 +41,7 @@ struct TodayDetailInfo: View {
                     Text("\(Int((weather.rain?.oneHour ?? 0)))MM")
                         .modifier(ContentSmallModifier())
                     
-                    Text("Precipitation")
+                    Text("precipitation.title")
                         .modifier(ContentSmallInfoModifier())
                 }
                 
@@ -60,10 +51,10 @@ struct TodayDetailInfo: View {
                     Image(.todayPressure)
                         .imageFrameShape()
                     
-                    Text("\(weather.main.pressure.roundDouble())hPa")
+                    Text("\(weather.main.pressure.roundDouble()) hPa")
                         .modifier(ContentSmallModifier())
                     
-                    Text("Pressure")
+                    Text("pressure.title")
                         .modifier(ContentSmallInfoModifier())
                 }
             }
@@ -81,7 +72,7 @@ struct TodayDetailInfo: View {
                     Text(String(weather.wind.speed.metersPerSecondToKilometersPerHour().roundDouble()) + "KM/H")
                         .modifier(ContentSmallModifier())
                     
-                    Text("Wind")
+                    Text("wind.title")
                         .modifier(ContentSmallInfoModifier())
                 }
                 
@@ -94,10 +85,10 @@ struct TodayDetailInfo: View {
                     Text(weather.wind.windDirection)
                         .modifier(ContentSmallModifier())
                     
-                    Text("Direction")
+                    Text("direction.title")
                         .modifier(ContentSmallInfoModifier())
                 }
-                .padding(.horizontal, 50)
+                .padding(.horizontal, 55)
             }
         }
     }

@@ -103,91 +103,91 @@ class WeatherManager {
             switch icon {
             case "01d":
                 if temperature > 30 {
-                    return "It’s hot as f***."
+                    return String(localized: "hot.message")
                 } else {
-                    return "Is sunny day, go out."
+                    return String(localized: "day.clear.sky.message")
                 }
             case "01n":
-                return "Can see stars."
+                return String(localized: "night.clear.sky.message")
             case "02d":
-                return "There’s few clouds"
+                return String(localized: "few.clouds.message")
             case "02n":
-                return "There’s few clouds"
+                return String(localized: "few.clouds.message")
             case "03d":
-                return "It’s cloudy"
+                return String(localized: "cloudy.message")
             case "03n":
-                return "Sory, no stars"
+                return String(localized: "cloudy.message")
             case "04d":
-                return "It’s cloudy"
+                return String(localized: "cloudy.message")
             case "04n":
-                return "It’s cloudy"
+                return String(localized: "cloudy.message")
             case "09d":
-                return "It’s showers."
+                return String(localized: "showers.message")
             case "09n":
-                return "It’s showers."
+                return String(localized: "showers.message")
             case "10d":
-                return "It’s raining."
+                return String(localized: "rainy.message")
             case "10n":
-                return "It’s raining."
+                return String(localized: "rainy.message")
             case "11d":
-                return "Fear the lightning."
+                return String(localized: "thunderstrom.message")
             case "11n":
-                return "Fear the lightning."
+                return String(localized: "thunderstrom.message")
             case "13d":
-                return "It’s snowing"
+                return String(localized: "snow.message")
             case "13n":
-                return "It's snowing."
+                return String(localized: "snow.message")
             case "50d":
-                return "It's foggy."
+                return String(localized: "fog.message")
             case "50n":
-                return "It's foggy."
+                return String(localized: "fog.message")
             // Add more cases for other icon values as needed
             default:
-                return "DefaultImage" // Provide a default image name or URL
+                return String(localized: "no.info.current.weather")
             }
         }
     
     func getWeatherInfoFormForecastIcon(icon: String) -> String {
             switch icon {
             case "01d":
-                return "Sunny."
+                return String(localized: "forecast.sun.message")
             case "01n":
-                return "Clean sky."
+                return String(localized: "forecast.moon.message")
             case "02d":
-                return "Scattered clouds."
+                return String(localized: "forecast.scattered.clouds.message")
             case "02n":
-                return "Scattered clouds."
+                return String(localized: "forecast.scattered.clouds.message")
             case "03d":
-                return "Cloudy"
+                return String(localized: "forecast.cloudy.message")
             case "03n":
-                return "Cloudy"
+                return String(localized: "forecast.cloudy.message")
             case "04d":
-                return "Cloudy"
+                return String(localized: "forecast.cloudy.message")
             case "04n":
-                return "Cloudy"
+                return String(localized: "forecast.cloudy.message")
             case "09d":
-                return "Rain showers."
+                return String(localized: "forecast.rain.showers.message")
             case "09n":
-                return "Rain showers.."
+                return String(localized: "forecast.rain.showers.message")
             case "10d":
-                return "Raining."
+                return String(localized: "forecast.rain.message")
             case "10n":
-                return "Raining."
+                return String(localized: "forecast.rain.message")
             case "11d":
-                return "Thunderstorm!"
+                return String(localized: "forecast.thunderstorm.message")
             case "11n":
-                return "Thunderstorm!"
+                return String(localized: "forecast.thunderstorm.message")
             case "13d":
-                return "Snowing"
+                return String(localized: "forecast.snowing.message")
             case "13n":
-                return "Snowing."
+                return String(localized: "forecast.snowing.message")
             case "50d":
-                return "Mist!."
+                return String(localized: "forecast.mist.message")
             case "50n":
-                return "Mist!"
+                return String(localized: "forecast.mist.message")
             // Add more cases for other icon values as needed
             default:
-                return "DefaultImage" // Provide a default image name or URL
+                return String(localized: "forecast.no.info.current.weather")
             }
         }
     
@@ -205,7 +205,9 @@ class WeatherManager {
         
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
         
-        guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data") }
+        guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+            throw GHError.invalidResponse
+        }
         
         let decodedData = try JSONDecoder().decode(CurrentResponse.self, from: data)
                 
@@ -224,8 +226,10 @@ class WeatherManager {
         let urlRequest = URLRequest(url: url)
         
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
-        
-        guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data") }
+    
+        guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+            throw GHError.invalidResponse
+        }
         
         let decoder = JSONDecoder()
         
@@ -235,6 +239,10 @@ class WeatherManager {
                 
         return decodedData
     }
+}
+
+enum GHError: Error {
+    case invalidResponse
 }
 
 // MARK: - Model of the response body we get from calling the OpenWeather API
